@@ -1,0 +1,57 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}    
+
+{% block titulo%}
+  
+Resultados
+
+{% endblock titulo%}
+
+{% block subtitulo%}
+  
+Aqui vemos los resultados de la busqueda de los juegos
+
+{% endblock subtitulo%}
+
+{% block botones%}
+
+<li class="nav-item"><a class="nav-link" href="{% url 'Juegos' %}">Videojuegos</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'JuegoFormulario' %}">Crear</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'BusquedaJuego' %}">Buscar</a></li>
+
+{% endblock %}
+
+{% block formu%}
+
+{% if resul %}
+
+    
+
+<center>
+
+    <p><h3>Estamos buscando la placa de video: {{juego}} </h3></p>
+
+<ul>
+
+    {% for juego in resul %}
+
+        <li>
+            Nombre: {{juego.nombre}} -- Genero: {{juego.genero}} -- Plataforma: {{juego.plataforma}} -- Dificultad: {{juego.dificultad}} -- Finalizado?: {{juego.finalizado}}
+        </li>
+    
+</center>
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<h3>No hay resultados que coincidan con tu busqueda</h3>
+
+
+{% endif %}
+
+
+
+{% endblock formu%}

@@ -1,0 +1,40 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}    
+
+{% block titulo%}
+  
+Juegos
+
+{% endblock titulo%}
+
+{% block subtitulo%}
+  
+Aqui puedes añadir tus juegos a nuestra base de datos.
+
+{% endblock subtitulo%}
+
+{% block botones %}
+
+<li class="nav-item"><a class="nav-link" href="{% url 'Juegos' %}">Videojuegos</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'BusquedaJuego' %}">Buscar</a></li>
+
+{% endblock botones %}
+
+{% block formu%}
+
+<center><form action="" method="POST"> {% csrf_token %}
+    
+    <table>
+       
+        {{form3.as_table}}
+
+    </table>
+
+    <input type="submit" value="Enviar datos">
+
+
+ </form></center>
+
+{% endblock formu%}

@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}    
+
+{% block titulo%}
+  
+Juegos
+
+{% endblock titulo%}
+
+{% block subtitulo%}
+  
+Contanos cuales te pasaste
+
+{% endblock subtitulo%}
+
+{% block botones %}
+
+<li class="nav-item"><a class="nav-link" href="{% url 'JuegoFormulario' %}">Crear</a></li>
+<li class="nav-item"><a class="nav-link" href="{% url 'BusquedaJuego' %}">Buscar</a></li>
+
+{% endblock botones %}
