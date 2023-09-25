@@ -7,11 +7,13 @@
 ##Instalaciones:
 
 - Primer paso: Instalar Python.
+
 - Segundo paso: Instalar Django.
   
 ##Realizar migraciones:
 
 -python manage.py makemigrations
+
 -python manage.py migrate
 
 ## Ejecutar el proyecto:
